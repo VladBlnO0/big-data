@@ -61,7 +61,7 @@ try {
         ]);
     }
 
-
+    echo "All movies<br>";
     echo "<pre>";
     $stmt = $pdo->prepare("SELECT * FROM movies LIMIT 5");
     $stmt->execute();
@@ -69,6 +69,7 @@ try {
     print_r($result);
     echo "</pre>";
 
+    echo "Highly rated movies<br>";
     echo "<pre>";
     $stmt = $pdo->prepare("SELECT * FROM movies WHERE movies.rating >= 9");
     $stmt->execute();
